@@ -28,7 +28,7 @@ create_output_if_doesnt_exist(output_dir)
 
 
 ## retrieve the price data from yahoo.finance
-tickers = c("AAPL","WMT","IBM","FB","TGT")
+tickers = c("AAPL","GOOG","IBM","MSFT","TSLA")
 stockprice = pdfetch_YAHOO(tickers,fields="adjclose",from="2018-01-01", to="2020-12-31", interval= "1wk")
 print(head(stockprice))
 
@@ -83,7 +83,7 @@ dim(ff_all)
 ## select obs. based on quantile of market excess returns
 
 ff_all_small = ff_all %>%
-  select(AAPL,WMT,IBM,FB,TGT,Mkt.RF,SMB,HML,RF,date) %>%
+  select(AAPL,GOOG,IBM,MSFT,TSLA,Mkt.RF,SMB,HML,RF,date) %>%
   filter(Mkt.RF>=quantile(Mkt.RF,probs=0.25) & 
         Mkt.RF<=quantile(Mkt.RF,probs=0.75))
 dim(ff_all_small)
