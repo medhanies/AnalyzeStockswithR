@@ -12,7 +12,7 @@ library(lubridate)
 options(digits=4)
 
 ## reset the working directory
-setwd("C:/Users/lxm133730/Dropbox/teaching/FTEC/FTEC6320/hw")
+setwd("/Users/medhaniesolomon/programming/R/hw2")
 
 ## create a folder for outputs
 output_dir <- "outputs/"
