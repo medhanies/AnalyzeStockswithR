@@ -8,7 +8,7 @@ library(tidyquant)
 options(digits=4)
 
 ## retrieve the price data from yahoo.finance
-tickers = c("AAPL","WMT","IBM","FB","TGT")
+tickers = c("AAPL","GOOG","IBM","MSFT","TSLA")
 stockprice = pdfetch_YAHOO(tickers,fields="adjclose",from="2018-01-01", to="2020-12-31", interval= "1wk")
 print(head(stockprice))
 
